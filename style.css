@@ -1,0 +1,614 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');*/
+
+/* font face(buat offline)*/
+@font-face {
+	font-family: 'Poppins';
+	src: url('fonts/Poppins-ExtraLight.ttf') format('truetype');
+	font-weight: 200;
+}
+@font-face {
+	font-family: 'Poppins';
+	src: url('fonts/Poppins-Light.ttf') format('truetype'));
+	font-weight: 300;
+}
+@font-face {
+	font-family: 'Poppins';
+	src: url('fonts/Poppins-Regular.ttf') format('truetype');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Poppins';
+	src: url('fonts/Poppins-Medium.ttf') format('truetype');
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Poppins';
+	src:  url('fonts/Poppins-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Poppins';
+	src:  url('fonts/Poppins-Bold.ttf') format('truetype');
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'Poppins';
+	src: url('fonts/Poppins-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+}
+@font-face {
+	font-family: 'Poppins';
+	src:  url('fonts/Poppins-Black.ttf') format('truetype');
+	font-weight: 900;
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins','Times New Roman';
+	scroll-behavior: smooth; /* smooth scrolling effect */ 
+}
+
+section
+{
+	padding: 100px; /* kaya efek container di bootstrap 4 */
+}
+
+.banner
+{
+	position: relative;
+	min-height: 100vh; /* supaya minimal halamannya penuh */
+	background: url(banner.jpg);
+	background-size: cover;
+	background-position: right;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.banner h2{
+	font-size: 3em;
+	color: #fff;
+	font-weight: 500;
+	line-height: 1.5em;
+}
+
+.banner h2 span
+{
+	font-size: 1.5em; /* di inherit jadi ukurannya ditambah dari yang diatas */
+	font-weight: 700;
+}
+
+.banner h3
+{
+	font-size: 1.5em;
+	color: #fff;
+	font-weight: 500;
+}
+
+.btn
+{
+	position: relative;
+	background: #2196f3;
+	display: inline-block; /* supaya bisa diberi margin karena element a ini defaultnya block */
+	color: #fff;
+	margin-top: 20px;
+	padding: 10px 30px;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: 500;
+}
+
+/* navbar */
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 40px 100px;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: .5s;
+}
+
+/* efek sticky */
+header.sticky
+{
+	background: #fff; 
+	padding: 20px 100px;
+	box-shadow: 0 5px 20px rgba(0,0,0,.1);	
+}
+
+header.sticky .logo
+{
+	color: #111;
+}
+header.sticky ul li a
+{
+	color: #111;
+}
+
+header .logo
+{
+	font-size: 24px;
+	font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+header ul
+{
+	display: flex;
+	position: relative;
+}
+
+header ul li
+{
+	position: relative;
+	list-style: none;
+}
+
+header ul li a
+{
+	position: relative;
+/*	display: inline-block;*/
+	margin: 0 15px;
+	color: #fff;
+	text-decoration: none;
+
+}
+
+/* akhir navbar */
+
+/* about */
+.heading
+{
+	margin-bottom: 30px;
+	width: 100%;
+	text-align: center;
+	color: #111;
+}
+
+.heading h2
+{
+	font-weight: 600;
+	font-size: 30px;
+}
+
+.content
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.contentBx h3
+{
+	font-size: 24px;
+}
+
+.contentBx
+{
+	padding-right: 30px;
+}
+
+.w50
+{
+	min-width: 50%;
+}
+
+img
+{
+	max-width: 100%;
+}
+
+/*akhir about*/
+
+/* services */
+.services
+{
+	background: #111;
+}
+
+.heading.white
+{
+	color: #fff;
+}
+
+.services .content
+{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.services .content .servicesBx
+{
+	padding: 40px 20px;
+	background: #333;
+	color: #fff;
+	max-width: 340px;
+	margin: 20px;
+	text-align: center;
+	transition: .5s;
+}
+
+.services .content .servicesBx:hover
+{
+	background: #2196f3;
+
+}
+
+.services .content .servicesBx img
+{
+	max-width: 80px;
+	filter: invert(1);	
+}
+
+.services .content .servicesBx h2
+{
+	color: #fff;
+	font-weight: 600;
+} 
+
+/* akhir services*/
+
+/* work */
+.work .content
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.work .content .workBx
+{
+	max-width: 50%;
+	padding: 20px;
+}
+
+.work .content .workBx img
+{
+	max-width: 100%;
+}
+
+/* akhir work */
+
+/* testimonial */
+.testimonial{
+	background: #f7f7f7;
+}
+
+.testimonial .content{
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.testimonial .content .testimonialBx
+{
+	max-width: calc(50% - 40px);
+	padding: 60px 40px;
+	margin: 20px;
+	background: #2196f3;
+}
+
+.testimonial .content .testimonialBx p
+{
+	color: #fff;
+	font-weight: 300;
+	font-size: 16px;
+	font-style: italic;
+}
+
+.testimonial .content .testimonialBx h3
+{
+	color: #fff;
+	margin-top: 40px;
+	font-weight: 600;
+	text-align: end;
+	line-height: 1em;
+	font-size: 20px;
+}
+
+.testimonial .content .testimonialBx span
+{
+	font-size: 14px;
+	font-weight: 500;
+}
+
+/* akhir testimonisal*/
+
+/* contact */
+.contact
+{
+	background: #111;
+}
+
+.formBx
+{
+	min-width: 60%;
+}
+
+.formBx form
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.formBx form h3,
+.contactInfo h3
+{
+	color: #fff;
+	font-weight: 500;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.formBx form input,
+.formBx form textarea
+{
+	margin-bottom: 20px;
+	padding: 15px;
+	font-size: 16px;
+	color: #fff;
+	background: #222;
+	border: none;
+	outline: none;
+	resize: none; /* menghilangkan resize dari textarea */
+}
+
+.formBx form textarea
+{
+	min-height: 200px;
+}
+
+.formBx form input::placeholder,
+.formBx form textarea::placeholder
+{
+	color: #999;
+}
+
+.formBx form input[type="submit"]
+{
+	text-transform: uppercase;
+	max-width: 100px;
+	background: #2196f3;
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+
+.contactInfo
+{
+	min-width: 40%;
+}
+
+.contactInfoBx
+{
+	position: relative;
+}
+
+.contactInfoBx .box
+{
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+}
+
+.contactInfoBx .box .icon
+{
+	color: #fff;
+	min-width: 40px;
+	padding-top: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	font-size: 24px;	
+}
+
+.contactInfoBx .box .text
+{
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	color: #fff;
+	flex-direction: column;
+	font-weight: 300;
+}
+
+.contactInfoBx .box .text h3
+{
+	font-weight: 500;
+	color: #2169f3;
+}
+
+.copyright
+{
+	font-size: 14px;
+	color: #000;
+	font-weight: 500;
+	text-align: center;
+	padding: 20px;
+}
+
+/* akhir contact */
+
+/* responsive berlaku ketika ukuran window 0-991px doang(android/tablet) */
+@media(max-width:991px)
+{
+	header,
+	header.sticky
+	{
+		padding: 20px 50px;
+		z-index: 1000;
+
+	}
+
+	.menu
+	{
+		position: fixed;
+		top: 75px;
+		left: -100%;
+		display: block;
+		padding: 100px  50px;
+		text-align: center;
+		z-index: 999;
+		width: 100%;
+		height: 100vh;
+		background: #fff;
+		transition: .5s;
+		border-top: 1px solid rgba(0,0,0.2);
+	}
+
+	.menu.active
+	{
+		left: 0;
+	}
+
+	header ul li a
+	{
+		color: #111;
+		font-size: 24px;
+		margin: 10px;
+	}
+
+	.toggle
+	{
+		background-image: url(menu.png);
+		width: 50px;
+		height: 50px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 30px;
+		cursor: pointer;
+	}
+
+	.toggle.active
+	{
+		background-image: url(close.png);
+		width: 50px;
+		height: 50px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 30px;
+		cursor: pointer;
+	}
+
+	header.sticky .toggle
+	{
+		filter: invert(1);
+	}
+
+	section 
+	{
+		padding: 90px 50px;
+	}
+
+	.banner
+	{
+		min-height: 50vh; 
+		padding: 150px 50px 100px;
+	}
+
+	.banner h2
+	{
+		font-size: 1.5em;
+	}
+
+	.banner h3
+	{
+		font-size: 1em;
+	}
+
+	.btn
+	{
+		margin-top: 10px;
+		padding: 10px 20px;
+		font-size: 16px;
+	}
+
+	.heading h2
+	{
+		font-size: 24px;
+	} 
+
+	.contentBx h3
+	{
+		font-size: 20px;
+	}
+
+	.content
+	{
+		flex-direction: column;
+	}
+
+	.w50
+	{
+		margin-bottom: 20px;
+	}
+	.foto
+	{
+		display: flex;
+		justify-content: center;
+	}
+
+	.services .content .servicesBx
+	{
+		margin: 10px;
+		max-width: 600px;
+	}
+
+	.work .content .workBx
+	{
+		max-width: 100%;
+		padding: 10px;
+	}
+
+	.testimonial .content .testimonialBx
+	{
+	    max-width: calc(100% - 20px);
+	    padding: 40px 20px;
+	    margin: 10px;
+	}
+
+	.testimonial .content .testimonialBx h3 
+	{
+		margin-top: 20px;
+	}
+
+	.contactInfo
+	{
+		margin: 20px 0;
+	}
+
+}
+
+/* responsive berlaku layar dari 0-600px */
+@media(max-width: 600px) 
+{
+	header,
+	header.sticky
+	{
+		padding: 20px 20px;
+	}
+
+	.banner
+	{
+		padding: 150px 20px 100px;
+	}
+
+	section
+	{
+		padding: 100px 20px;
+	}
+	.services .content .servicesBx
+	{
+		max-width: 90%;
+	}
+}
